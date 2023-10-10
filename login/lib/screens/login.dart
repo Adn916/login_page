@@ -56,11 +56,6 @@ final _formKey = GlobalKey<FormState>();
         
                 
                 validator: (value) {
-              //  if(_isDataMatched){
-              //   return null;
-              //  }else{
-              //   return "error";
-              //  }
 
               if(value == null || value.isEmpty){
                 return "value is  empty";
@@ -142,7 +137,7 @@ final _formKey = GlobalKey<FormState>();
   void checklogin(BuildContext ctx){
   final _username = _usernamecontroller.text;
   final _password = _passwordcontroller.text;
-  if(_username == _password){
+  if(_username == "adnan" && _password == "123"){
     //go to home
     print("username and password match");
 

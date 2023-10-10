@@ -15,18 +15,87 @@ class ScreenHome extends StatelessWidget {
           signout(context);
         }, icon: Icon(Icons.exit_to_app),)
       ],
-      
       ),
-      body:SafeArea(
-      child: Center (
-        child:Text("HOME SCREEN") ,
-    )
-    )
+       body: ListView(
+        children: [
+          Container(
+            alignment: Alignment.center,
+            height: 150,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                IconButton(onPressed: () {}, icon: Icon(Icons.laptop_mac)),
+                Text(
+                  'ASUS',
+                  style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+                ),
+              ],
+            ),
+          ),
+          Container(
+            alignment: Alignment.center,
+            height: 150,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                IconButton(onPressed: () {}, icon: Icon(Icons.laptop_mac,color: Colors.blue,)),
+                Text(
+                  'HP',
+                  style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold,color: Colors.blue),
+                ),
+              ],
+            ),
+            color: Colors.grey,
+          ),
+          Container(
+            alignment: Alignment.center,
+            height: 150,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                IconButton(onPressed: () {}, icon: Icon(Icons.laptop_mac)),
+                Text(
+                  'ACER',
+                  style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+                ),
+              ],
+            ),
+          ),
+          Container(
+            height: 150,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                IconButton(onPressed: () {}, icon: Icon(Icons.laptop_mac,color: Colors.blue,)),
+                Text(
+                  'LENOVO',
+                  style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold,color: Colors.blue),
+                ),
+              ],
+            ),
+            color: Colors.grey,
+          ),
+          Container(
+            alignment: Alignment.center,
+            height: 150,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                IconButton(onPressed: () {}, icon: Icon(Icons.laptop_mac)),
+                Text(
+                  'SAMSUNG',
+                  style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+                ),
+              ],
+            ),
+          )
+        ],
+      ),
     );
   }
 
-  signout(BuildContext ctx){
-    Navigator.of(ctx).pushAndRemoveUntil(MaterialPageRoute(builder: (ctx1)=>ScreenLogin()), (route) => false);
-
+  signout(BuildContext ctx) {
+    Navigator.of(ctx).pushAndRemoveUntil(
+        MaterialPageRoute(builder: (ctx) => ScreenLogin()), (route) => false);
   }
 }
