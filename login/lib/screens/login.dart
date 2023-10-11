@@ -11,7 +11,7 @@ class ScreenLogin extends StatefulWidget {
 class _ScreenLoginState extends State<ScreenLogin> {
 final _usernamecontroller = TextEditingController();
 
-final _passwordcontroller = TextEditingController();
+final _passwordcontroller = TextEditingController(); 
 
 bool _isDataMatched = true;
 
@@ -87,11 +87,6 @@ final _formKey = GlobalKey<FormState>();
         
               
              validator: (value) {
-              //  if(_isDataMatched){
-              //   return null;
-              //  }else{
-              //   return "error";
-              //  }
 
               if(value == null || value.isEmpty){
                 return "value is  empty";
@@ -134,11 +129,13 @@ final _formKey = GlobalKey<FormState>();
     );
   }
 
-  void checklogin(BuildContext ctx){
+  void checklogin(BuildContext ctx){ 
   final _username = _usernamecontroller.text;
   final _password = _passwordcontroller.text;
   if(_username == "adnan" && _password == "123"){
+
     //go to home
+    
     print("username and password match");
 
     Navigator.of(ctx).pushReplacement(MaterialPageRoute(builder: (ctx1)=> ScreenHome())); 
