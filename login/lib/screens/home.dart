@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:login/screens/login.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class ScreenHome extends StatelessWidget {
   const ScreenHome({super.key});
@@ -20,14 +21,20 @@ class ScreenHome extends StatelessWidget {
         itemCount: 100,
         itemBuilder: (context, index) => Card(
         child: ListTile(
+          trailing: Icon(Icons.nat),
+          leading: Icon(Icons.abc),
           title: Text("hello $index"),
         ),
       ),),
     );
   } 
+ 
+  signout(BuildContext ctx) async{
+    final _sharedpre=await SharedPreferences.getInstance();
+    await _sharedpre.clear();
 
-  signout(BuildContext ctx) {
     Navigator.of(ctx).pushAndRemoveUntil(
         MaterialPageRoute(builder: (ctx) => ScreenLogin()), (route) => false);
+
   }
 }
