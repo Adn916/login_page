@@ -31,7 +31,6 @@ final _formKey = GlobalKey<FormState>();
         child: Container(
           
           padding: EdgeInsets.symmetric(horizontal: 20),
-        
         child: Form(
           key: _formKey,
           child: Column(mainAxisAlignment: MainAxisAlignment.center,crossAxisAlignment:CrossAxisAlignment.center,
