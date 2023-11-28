@@ -107,7 +107,6 @@ final _formKey = GlobalKey<FormState>();
                   ),
                   ),
                 ),
-                
               ],
             ),
             ElevatedButton.icon(
@@ -117,8 +116,6 @@ final _formKey = GlobalKey<FormState>();
               }else{
                 print("data empty");
               }
-             
-              // checklogin(context);
             }, 
             icon: Icon(Icons.check), 
             label: Text("login")),
@@ -141,8 +138,6 @@ final _formKey = GlobalKey<FormState>();
 
     Navigator.of(ctx).pushReplacement(MaterialPageRoute(builder: (ctx1)=> ScreenHome())); 
   }else{
-    
-    //show text
     setState(() {
       _isDataMatched = false;
     });
