@@ -13,9 +13,12 @@ class ScreenHome extends StatelessWidget {
         backgroundColor: Colors.green,
         leading: Icon(Icons.home),
         actions: [
-          //   IconButton(onPressed: (){
-          //     signout(context);
-          //   }, icon: Icon(Icons.exit_to_app),)
+          IconButton(
+            onPressed: () {
+              signout(context);
+            },
+            icon: Icon(Icons.exit_to_app),
+          )
         ],
       ),
       body: ListView.builder(
